@@ -1,0 +1,15 @@
+@import '../../assets/scss/colors.scss';
+@import '../../assets/scss/animation.scss';
+
+.layer1 {
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    animation: page-fade-in 0.75s;
+}
+
+.layer2 {
+    width: 100%;
+    height: auto;
+    background-color: $background-layer;
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "name": "GitHub",
+        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+    },
+    {
+        "name": "Docker",
+        "icon": "https://cdn.iconscout.com/icon/free/png-256/docker-3629324-3031823.png"
+    },
+    {
+        "name": "MQTT Broker",
+        "icon": "https://www.opc-router.de/wp-content/uploads/2022/07/MQTT_128px-1.png"
+    }
+]

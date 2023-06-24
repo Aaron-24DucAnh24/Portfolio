@@ -1,0 +1,16 @@
+@import '../../assets/scss/colors.scss';
+
+.row {
+    align-items: center;
+    position: relative;
+    background-color: $blue-silver;
+    border: 2px solid $silver;
+    border-radius: 4px;
+    margin-bottom: 32px;
+
+    .col {
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+    }
+}

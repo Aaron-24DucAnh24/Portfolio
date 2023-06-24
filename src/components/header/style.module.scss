@@ -1,0 +1,140 @@
+@import '../../assets/scss/colors.scss';
+
+.container {
+    height: 58px;
+    background-color: $blue-silver;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom: 1px solid $silver;
+}
+
+.row {
+    align-items: center;
+}
+
+.navButtonContainer {
+    display: none;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+
+    &:hover {
+        background-color: $silver;
+    }
+
+    .logoText {
+        font-size: 18px;
+        font-weight: 800;
+        color: white;
+    }
+}
+
+.navBar {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .navItem {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    .navItem__focused {
+        color: $blue;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        text-decoration-thickness: 2px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .navContainer {
+        &:hover {
+            .navBar {
+                display: flex;
+            }
+        }  
+    }
+
+    .navButtonContainer {
+        color: white;
+        font-size: 32px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+
+    .navBar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        position: absolute;
+        background-color: $blue-silver;
+        top: 57px;
+        right: 0;
+        min-width: 240px;
+        padding-bottom: 4px;
+        border: 1px solid $silver;
+        border-top: none;
+        border-radius: 4px;
+
+
+        li {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            padding-left: 20px; 
+        }
+    }
+}
+
+@media (max-width: 739px){
+    .navContainer {
+        &:hover {
+            .navBar {
+                display: block;
+            }
+        }  
+    }
+
+    .navBar {
+        display: none;
+        position: fixed;
+        background-color: $blue-silver;
+        top: 57px;
+        bottom: 0;
+        right: 0;
+        border: 1px solid $silver;
+        border-top: none;
+        width: 150px;
+
+
+        li {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            padding-left: 16px;
+            font-size: 20px;
+        }
+    }
+}
