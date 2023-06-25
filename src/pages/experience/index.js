@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import {MdWork } from 'react-icons/md'
 import WorkSection from '../../components/workSection'
 import BackgroundLayer from '../../components/backgroundLayer'
 import PageHeader from '../../components/pageHeader'
@@ -8,7 +9,7 @@ import experience from '../../assets/json/experience.json'
 export default function ExperiencePage() {
     return (
         <BackgroundLayer name='exp'>
-            <PageHeader title='My experience'/>
+            <PageHeader title='Experience' icon={<MdWork/>}/>
 
             <div className={clsx('grid wide', style.grid)}>
 

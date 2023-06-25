@@ -1,5 +1,6 @@
 @import '../../assets/scss/colors.scss';
-@import '../../assets/scss/animation.scss';s
+@import '../../assets/scss/animation.scss';
+@import '../../assets/scss/animation.scss';
 
 .grid {
     height: auto;
@@ -17,6 +18,7 @@
 
 .firstCol {
     color: white;
+    animation: left-to-right 0.75s;
 
     .bigIntro {
         font-size: 48px;
@@ -107,10 +109,18 @@
 
 @media (max-width: 739px) {
     .firstCol {
-        padding-left: 52px;
+        padding: 32px;
+
+        .bigIntro {
+            font-size: 32px;
+        }
 
         .flexIntro {
-            font-size: 24px;
+            font-size: 20px;
+        }
+
+        .detail {
+            font-size: 16px;
         }
     }
 }

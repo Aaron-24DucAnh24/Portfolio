@@ -3,8 +3,8 @@
 .container {
     border: 1px solid $light-silver;
     border-radius: 4px;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +19,6 @@
         color: aliceblue;
         padding-top: 12px;
         font-weight: 500;
-        font-size: 18px;
+        font-size: 14px;
     }
 }

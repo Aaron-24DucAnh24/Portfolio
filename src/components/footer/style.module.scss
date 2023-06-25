@@ -68,17 +68,20 @@
     }
 
     hr {
-        color: $light-silver;
-        width: 80%;
+        border: 1px solid $light-silver;
+        width: 60%;
     }
 
     .secondRow {
         padding-top: 32px;
         padding-bottom: 24px;
+        display: flex;
+        align-items: center;
+        color: $light-silver;
+        font-weight: 600;
 
         p {
-            color: $light-silver;
-            font-weight: 600;
+            padding-left: 4px;
         }
     }
 }

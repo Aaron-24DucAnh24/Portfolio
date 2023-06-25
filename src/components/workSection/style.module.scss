@@ -1,7 +1,7 @@
 @import '../../assets/scss/colors.scss';
 
 .container {
-    height: 150px;
+    height: 140px;
     width: 100%;
     background-color: $blue-silver;
     border-style: solid;
@@ -28,7 +28,7 @@
 
     .position  {
         font-weight: 600;
-        font-size: 24px;
+        font-size: 20px;
         color: $blue;
         padding-bottom: 12px;
     }
@@ -42,7 +42,7 @@
 
     .period {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 18px;
         color: $orange;
     }
 }
@@ -54,6 +54,5 @@
 @media (max-width: 1023px) {
     .container {
         padding-left: 20px;
-        height: 180px;
     }
 }

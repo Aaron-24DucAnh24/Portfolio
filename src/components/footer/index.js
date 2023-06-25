@@ -1,4 +1,4 @@
-import {FaPhoneAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagramSquare} from 'react-icons/fa'
+import {FaPhoneAlt, FaGithub, FaLinkedin, FaFacebook, FaInstagramSquare, FaCopyright} from 'react-icons/fa'
 import {IoMdMail} from 'react-icons/io'
 import {MdLocationOn} from 'react-icons/md'
 
@@ -31,7 +31,8 @@ export default function Footer() {
             <hr/>
 
             <div className={style.secondRow}>
-                <p>Created by Đức Anh Bùi</p>
+                <FaCopyright/>
+                <p> Đức Anh Bùi. All Rights Reserved.</p>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ export default function SkillPage() {
     return (
         <BackgroundLayer name='skills'>
 
-            <PageHeader icon={<FaTools/>} title={'My skills'}/>
+            <PageHeader icon={<FaTools/>} title={'Skills'}/>
 
             <div className={clsx('grid wide', style.grid)}>
 

@@ -12,9 +12,9 @@ export default function EducationPage() {
     return (
         <BackgroundLayer name='edu'>
 
-            <PageHeader icon={<HiAcademicCap/>} title={'My Education'}/>
+            <PageHeader icon={<HiAcademicCap/>} title={'Education and Certificate'}/>
 
-            <p className={style.quote}>
+            <p className={clsx('s-0', style.quote)}>
                 The result of education is not knowledge, 
                 it is the ability to think, self-study and solve problems.
             </p>
