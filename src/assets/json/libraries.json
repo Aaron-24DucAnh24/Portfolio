@@ -12,15 +12,11 @@
         "icon": "https://user-images.githubusercontent.com/18753861/152808707-639c2582-a945-4f25-b289-74c7b3d0fc3b.png"
     },
     {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
-    },   
+        "name": ".NET Core",
+        "icon": "https://s3-ap-southeast-1.amazonaws.com/homepage-media/wp-content/uploads/2020/03/04092434/NET_Core_Logo.png"
+    },
     {
         "name": "Flask",
         "icon": "https://ih1.redbubble.net/image.1759793499.3844/flat,128x128,075,t.jpg"
-    },    
-    {
-        "name": "FastAPI",
-        "icon": "https://gitlab.com/uploads/-/system/project/avatar/38086930/fastapi.ico?width=48"
-    }
+    } 
 ]

@@ -48,8 +48,7 @@ export default function HomePage() {
             strings: [
                 `<i class="${style.orange}">Backend Development</i>`, 
                 `<i class="${style.green}">Frontend Development</i>`, 
-                `<i class="${style.yellow}">Mobile Development</i>`,
-                `<i class="${style.blue}">DevOps Engineering</i>`],
+                `<i class="${style.yellow}">Mobile Development</i>`,],
             typeSpeed: 50,
             loop: true,
             backSpeed: 50
@@ -66,7 +65,7 @@ export default function HomePage() {
                         <p className={style.bigIntro}>Hi there,<br/>I'm <i>Đức Anh Bùi</i></p>
                         <p className={style.flexIntro}>I am into <span ref={dynamicText}></span></p>
                         <p className={style.detail}>
-                            I'm a Fullstack Web and Mobile Developer. 
+                            I'm a Fullstack Web developer. 
                             <br/>I love coding, bringing ideas to life and creating useful products.
                         </p>
                         <div className={style.buttonContainer}>

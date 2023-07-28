@@ -10,5 +10,9 @@
     {
         "name": "Firebase",
         "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+    },
+    {
+        "name": "SQL Server",
+        "icon": "https://img.icons8.com/color/48/microsoft-sql-server.png"
     }
 ]

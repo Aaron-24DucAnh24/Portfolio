@@ -82,7 +82,7 @@ export default function Header() {
                     <ul className={style.navBar}>
                         <li><Link onClick={()=>handleNavItem('home')} className={linkClasses.home} to={'/Portfolio'}>Home</Link></li>
                         <li><Link onClick={()=>handleNavItem('education')} className={linkClasses.education} to={'/Portfolio/education'}>Education</Link></li>
-                        <li><Link onClick={()=>handleNavItem('skills')} className={linkClasses.skills} to={'/Portfolio/skills'}>Skills</Link></li>
+                        <li><Link onClick={()=>handleNavItem('skills')} className={linkClasses.skills} to={'/Portfolio/skills'}>Tech stack</Link></li>
                         <li><Link onClick={()=>handleNavItem('experience')} className={linkClasses.experience} to={'/Portfolio/experience'}>Experience</Link></li>
                         <li><span onClick={()=>handleScroll()} className={style.navItem}>Contact</span></li>
                     </ul>
