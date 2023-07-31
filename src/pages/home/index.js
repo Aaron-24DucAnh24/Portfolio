@@ -62,7 +62,7 @@ export default function HomePage() {
             <div className={clsx('grid wide', style.grid)}>
                 <div className={clsx('row', style.row)}>
                     <div className={clsx('col xl-6 l-6 m-12 s-12', style.firstCol)}>
-                        <p className={style.bigIntro}>Hi there,<br/>I'm <i>Đức Anh Bùi</i></p>
+                        <p className={style.bigIntro}>Hi there,<br/>I'm <i>Duc Anh Bui</i></p>
                         <p className={style.flexIntro}>I am into <span ref={dynamicText}></span></p>
                         <p className={style.detail}>
                             I'm a Fullstack Web developer. 

@@ -72,7 +72,7 @@ export default function Header() {
             <div className={clsx('row height-100pc', style.row)}>
                 <a className={clsx('col xl-2 l-3 m-4 s-6', style.logoContainer)} href='/Portfolio'>
                     <img src={logoHeader} width={'65'} className={style.logoImg} alt='logo.png'/>
-                    <p className={style.logoText}>Đức Anh Bùi</p>
+                    <p className={style.logoText}>Duc Anh Bui</p>
                 </a>
 
                 <div className={clsx('col xl-6 xl-o-4 l-6 l-o-3 m-1 m-o-7 s-2 s-o-4 height-100pc', style.navContainer)}>
