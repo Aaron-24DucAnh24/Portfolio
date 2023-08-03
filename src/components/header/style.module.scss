@@ -70,16 +70,6 @@
                 transition: opacity 0.5s linear, visibility 0.5s linear, transform 0.5s linear;
             }
         }
-        
-        &::after {
-            width: 200px;
-            height: 10px;
-            background-color:red;
-            position: absolute ;
-            top: 0;
-            right: 0;
-            z-index: 9;
-        }
     }
 
     .navButtonContainer {
@@ -113,6 +103,7 @@
         visibility: hidden;
         transform: translateX(100px);
         opacity: 0;
+        transition: opacity 0.5s linear, visibility 0.5s linear, transform 0.5s linear;
 
         li {
             display: flex;
