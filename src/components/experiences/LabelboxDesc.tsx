@@ -1,0 +1,18 @@
+
+'use client';
+
+import { useAppSelector } from '@/utils/hooks';
+
+export const LabelboxDesc = () => {
+  const theme = useAppSelector(x => x.theme);
+
+  return (
+    <ul className="leading-6 space-y-2 text-sm text-third">
+      <li className="dotted-li">
+        <p>
+          {'Evaluated and iteratively refined AI-generated code within a Git-based repository, validating outputs against task requirements and enforcing production-level engineering standards.'}
+        </p>
+      </li>
+    </ul>
+  );
+};

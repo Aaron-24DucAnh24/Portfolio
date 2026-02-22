@@ -51,7 +51,7 @@ export const HomePage = () => {
             }} />
         </div>
         <div className='text:md sm:text-lg text-justify'>
-          {'I am a Bachelor of Computer Science and a dedicated software engineer with expertise in .NET and ReactJS. As a fresher, I am committed to continuous learning and growth, with the long-term goal of transitioning into a Business Analyst role.'}
+          {'I am a Bachelor of Computer Science and a dedicated software engineer. I am committed to continuous learning and growth, with the long-term goal of transitioning into a Business Analyst role.'}
         </div>
         <div className='flex space-x-2'>
           <Button

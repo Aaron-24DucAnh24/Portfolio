@@ -16,20 +16,14 @@ export const NPFullstackDesc = () => {
             onClick={() => window.open('https://institute.debeers.com/en-gb/education')}>
             <b>{'DeBeers Education'}</b>
           </i>
-          {', an educational website system for the fashion company DeBeers, using .NET Core 3.1, NextJS, and MSSQL.'}
+          {', an education platform for an international fashion company.'}
         </p>
       </li>
       <li className="dotted-li">
         {'Developed user management and authentication features integrating OKTA.'}
       </li>
       <li className="dotted-li">
-        {'Enhanced course creation and course payment features, and developed functionality for sending payment receipts to buyers and course creators.'}
-      </li>
-      <li className="dotted-li">
-        {'Improved course search features: categorized users that can access the courses.'}
-      </li>
-      <li className="dotted-li">
-        {'Communicated with customers to complete and modify different features.'}
+        {'Collaborated in a 6-member agile team, working closely with stakeholders to refine and deliver business requirements'}
       </li>
     </ul>
   );

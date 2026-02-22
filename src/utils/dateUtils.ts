@@ -10,7 +10,27 @@ export function formatDateRange(from: Date, to: Date | null): string {
 }
 
 export function calculateDuration(from: Date, to: Date | null): string {
-  const end = to || new Date();
-  const months = (end.getFullYear() - from.getFullYear()) * 12 + end.getMonth() - from.getMonth() + 1;
-  return `${months} ${months === 1 ? 'month' : 'months'}`;
+  const end = to ?? new Date();
+
+  let totalMonths =
+    (end.getFullYear() - from.getFullYear()) * 12 +
+    (end.getMonth() - from.getMonth());
+  totalMonths += 1;
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+  const parts: string[] = [];
+  if (years > 0) {
+    parts.push(`${years} ${years === 1 ? 'year' : 'years'}`);
+  }
+
+  if (months > 0) {
+    parts.push(`${months} ${months === 1 ? 'month' : 'months'}`);
+  }
+
+  if (parts.length === 0) {
+    return '0 months';
+  }
+
+  return parts.join(' ');
 }

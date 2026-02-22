@@ -5,10 +5,10 @@ export const NPInternDesc = () => {
         {'Learned the complete process of developing a software project.'}
       </li>
       <li className="dotted-li">
-        {'Reviewed skills in using HTML, CSS, JavaScript, and MSSQL and libraries (frameworks): NextJS, .NET Core, and React Native.'}
+        {'Reviewed skills in using MSSQL, NextJS, .NET Core, and React Native.'}
       </li>
       <li className="dotted-li">
-        {'Developed a simple parking lot management website; a simple mobile QR code scanning application; and a simple concert ticket booking application.'}
+        {'Applied knowledge to develop a simple parking lot management website; a simple mobile QR code scanning application; and a simple concert ticket booking application.'}
       </li>
     </ul>
   );

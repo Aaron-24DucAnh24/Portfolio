@@ -1,5 +1,13 @@
 [
   {
+    "name": "Labelbox",
+    "image": "/image/labelbox.jpg",
+    "position": "PR Writer with Feedback",
+    "from": "2026-02-20",
+    "descComponent": "LabelboxDesc",
+    "companyUrl": "https://labelbox.com"
+  },
+  {
     "name": "W2SOLUTION VIETNAM",
     "image": "/image/w2.png",
     "position": "Software Engineer",
@@ -14,7 +22,7 @@
     "from": "2023-08-01",
     "to": "2023-12-31",
     "descComponent": "NPFullstackDesc",
-    "companyUrl": "https://www.netpower.vn"
+    "companyUrl": "https://www.linkedin.com/company/netpower/?originalSubdomain=vn"
   },
   {
     "name": "NETPOWER VIETNAM",
@@ -23,6 +31,6 @@
     "from": "2023-06-01",
     "to": "2023-07-31",
     "descComponent": "NPInternDesc",
-    "companyUrl": "https://www.netpower.vn"
+    "companyUrl": "https://www.linkedin.com/company/netpower/?originalSubdomain=vn"
   }
 ]
