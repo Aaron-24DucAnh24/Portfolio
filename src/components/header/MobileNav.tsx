@@ -1,6 +1,6 @@
 'use client';
 
-import { PATH_NAME, TAB_NAME } from '@/utils/constants';
+import { NAV_ROUTES } from '@/utils/constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -15,13 +15,12 @@ export const MobileNav = () => {
   const theme = useAppSelector(x => x.theme);
 
   // STATES
-  const [currTab, setCurrTab] = useState<string>(TAB_NAME.HOME);
+  const [currTab, setCurrTab] = useState<string>(NAV_ROUTES[0].label);
   const [showNav, setShowNav] = useState<boolean>(false);
 
   // EFFECTS
   useEffect(() => {
-    if (pathName === PATH_NAME.HOME) setCurrTab(TAB_NAME.HOME);
-    else setCurrTab(pathName.charAt(1).toUpperCase() + pathName.slice(2));
+    setCurrTab(NAV_ROUTES.find(r => r.path === pathName)?.label ?? NAV_ROUTES[0].label);
     setShowNav(false);
   }, [pathName]);
 
@@ -47,54 +46,16 @@ export const MobileNav = () => {
             {showNav && <FaAngleUp className='ml-1 z-50' />}
           </div>
         }>
-        <li>
-          <Link
-            className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
-            href={PATH_NAME.HOME}>
-            {TAB_NAME.HOME}
-            {pathName === PATH_NAME.HOME && <FaCheck color={'#e60022'} />}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
-            href={PATH_NAME.EXPERIENCES}>
-            {TAB_NAME.EXPERIENCES}
-            {pathName === PATH_NAME.EXPERIENCES && <FaCheck color={'#e60022'} />}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
-            href={PATH_NAME.PROJECTS}>
-            {TAB_NAME.PROJECTS}
-            {pathName === PATH_NAME.PROJECTS && <FaCheck color={'#e60022'} />}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
-            href={PATH_NAME.EDUCATION}>
-            {TAB_NAME.EDUCATION}
-            {pathName === PATH_NAME.EDUCATION && <FaCheck color={'#e60022'} />}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
-            href={PATH_NAME.SKILLS}>
-            {TAB_NAME.SKILLS}
-            {pathName === PATH_NAME.SKILLS && <FaCheck color={'#e60022'} />}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
-            href={PATH_NAME.CONTACT}>
-            {TAB_NAME.CONTACT}
-            {pathName === PATH_NAME.CONTACT && <FaCheck color={'#e60022'} />}
-          </Link>
-        </li>
+        {NAV_ROUTES.map(({ path, label }) => (
+          <li key={path}>
+            <Link
+              className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
+              href={path}>
+              {label}
+              {pathName === path && <FaCheck color={'#e60022'} />}
+            </Link>
+          </li>
+        ))}
       </SmoothUl>
     </nav >
   );

@@ -7,7 +7,7 @@ import { IoChevronDownOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import { ShrinkBorder } from '../general/ShrinkBorder';
 import { THEME } from '@/utils/enums';
-import { useAppSelector } from '@/utils/hooks';
+import { useAppSelector, useHoverState } from '@/utils/hooks';
 
 interface IPersonalProjectCard {
   name: string;
@@ -22,13 +22,12 @@ export const PersonalProjectCard = (props: IPersonalProjectCard) => {
   const { name, type, techs, image, source, desc } = props;
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isHover, setIsHover] = useState(false);
+  const { isHover, hoverProps } = useHoverState();
   const isDarkTheme = useAppSelector(x => x.theme.value === THEME.DARK);
 
   return (
     <div
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      {...hoverProps}
       className={`shadow-md hover:shadow-2xl rounded-xl overflow-hidden border relative
         ${isDarkTheme ? 'border-white/10 bg-fifth' : 'border-gray-200 bg-white'}`}>
 

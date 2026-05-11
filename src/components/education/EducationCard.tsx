@@ -1,10 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
 import { ShrinkBorder } from '../general/ShrinkBorder';
 import { THEME } from '@/utils/enums';
-import { useAppSelector } from '@/utils/hooks';
+import { useAppSelector, useHoverState } from '@/utils/hooks';
 
 interface IEducationCard {
   image: string;
@@ -26,7 +25,7 @@ export const EducationCard = (props: IEducationCard) => {
   } = props;
 
   const isDarkTheme = useAppSelector(x => x.theme.value === THEME.DARK);
-  const [isHover, setIsHover] = useState(false);
+  const { isHover, hoverProps } = useHoverState();
 
   return (
     <div
@@ -34,8 +33,7 @@ export const EducationCard = (props: IEducationCard) => {
         `shadow-md hover:shadow-2xl rounded-xl overflow-hidden border relative
         ${isDarkTheme ? 'bg-fifth border-white/10' : 'bg-white border-gray-200'}`
       }
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}>
+      {...hoverProps}>
       <div className="px-4 py-4 w-full flex flex-col sm:flex-row items-center space-y-4 sm:space-x-4 sm:space-y-0">
         <Image
           className='object-cover shadow-lg rounded-full border'

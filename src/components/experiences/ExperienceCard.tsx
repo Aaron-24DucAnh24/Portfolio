@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ShrinkBorder } from '../general/ShrinkBorder';
 import { THEME } from '@/utils/enums';
-import { useAppSelector } from '@/utils/hooks';
+import { useAppSelector, useHoverState } from '@/utils/hooks';
 import { formatDateRange, calculateDuration } from '@/utils/dateUtils';
 import { IoChevronDownOutline, IoOpenOutline } from 'react-icons/io5';
 
@@ -73,13 +73,12 @@ const PositionRow = ({
 };
 
 export const ExperienceCard = ({ name, image, positions, companyUrl }: IExperienceCard) => {
-  const [isHover, setIsHover] = useState(false);
+  const { isHover, hoverProps } = useHoverState();
   const isDarkTheme = useAppSelector(x => x.theme.value === THEME.DARK);
 
   return (
     <div
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      {...hoverProps}
       className={`rounded-xl border overflow-hidden relative shadow-md hover:shadow-2xl
         ${isDarkTheme ? 'bg-fifth border-white/10' : 'bg-white border-gray-200 shadow-sm'}`}>
 

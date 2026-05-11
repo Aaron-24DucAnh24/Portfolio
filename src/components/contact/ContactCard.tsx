@@ -1,9 +1,9 @@
 'use client';
 
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 import { ShrinkBorder } from '../general/ShrinkBorder';
 import { THEME } from '@/utils/enums';
-import { useAppSelector } from '@/utils/hooks';
+import { useAppSelector, useHoverState } from '@/utils/hooks';
 import { IoOpenOutline } from 'react-icons/io5';
 
 interface IContactCard {
@@ -14,14 +14,13 @@ interface IContactCard {
 }
 
 export const ContactCard = ({ label, value, href, icon }: IContactCard) => {
-  const [isHover, setIsHover] = useState(false);
+  const { isHover, hoverProps } = useHoverState();
   const isDarkTheme = useAppSelector(x => x.theme.value === THEME.DARK);
 
   return (
     <a href={href} target='_blank' rel='noopener noreferrer'>
       <div
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
+        {...hoverProps}
         className={`rounded-xl overflow-hidden shadow-md hover:shadow-2xl border relative
           ${isDarkTheme ? 'bg-fifth border-white/10' : 'bg-white border-gray-200'}`}>
         <div className='flex items-center gap-4 px-5 py-4'>

@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
 import { ShrinkBorder } from '../general/ShrinkBorder';
 import { THEME } from '@/utils/enums';
-import { useAppSelector } from '@/utils/hooks';
+import { useAppSelector, useHoverState } from '@/utils/hooks';
 
 interface ISkillsCard {
   name: string;
@@ -12,14 +11,13 @@ interface ISkillsCard {
 
 export const SkillsCard = (props: ISkillsCard) => {
   const { name, items } = props;
-  const [isHover, setIsHover] = useState(false);
+  const { isHover, hoverProps } = useHoverState();
   const isDarkTheme = useAppSelector(x => x.theme.value === THEME.DARK);
 
   return (
     <div className='w-full px-4 sm:pb-4'>
       <div
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
+        {...hoverProps}
         className={
           `rounded-xl overflow-hidden shadow-md hover:shadow-2xl border relative
           ${isDarkTheme ? 'bg-fifth border-white/10' : 'bg-white border-gray-200'}`

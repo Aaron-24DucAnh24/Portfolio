@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useRef } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 import { AppDispatch, RootState } from '@/store';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { CONTROL_KEY } from './enums';
@@ -24,13 +24,14 @@ export const useClickOutside = (
   dependencyList: RefObject<HTMLElement>[]
 ) => {
   useEffect(() => {
-    document.addEventListener('mousedown', async (event) => {
+    const handler = async (event: MouseEvent) => {
       const isOutSide = dependencyList.every(ref =>
         ref.current && !ref.current.contains(event.target as HTMLElement)
       );
       isOutSide && action();
-    });
-    return () => document.removeEventListener('mousedown', () => { });
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
   }, []);
 };
 
@@ -47,7 +48,7 @@ export const useCatchKeyPress = (
   actionKey: string,
 ) => {
   useEffect(() => {
-    window.addEventListener('keydown', (e) => {
+    const handler = (e: KeyboardEvent) => {
       if (e.key !== actionKey) return;
       e.preventDefault();
 
@@ -68,7 +69,20 @@ export const useCatchKeyPress = (
           e.metaKey && action();
           break;
       }
-    });
-    return () => window.removeEventListener('keydown', () => { });
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
   }, []);
+};
+
+// USE HOVER STATE
+export const useHoverState = () => {
+  const [isHover, setIsHover] = useState(false);
+  return {
+    isHover,
+    hoverProps: {
+      onMouseEnter: () => setIsHover(true),
+      onMouseLeave: () => setIsHover(false),
+    },
+  };
 };

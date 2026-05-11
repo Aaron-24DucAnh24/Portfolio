@@ -9,6 +9,15 @@ export const STATIC_URLS = {
   CV: 'https://drive.google.com/drive/folders/1oJ4_Kta3MXeWfJUvFn2JWXPjX-oCK1Ci?usp=sharing',
 };
 
+export const NAV_ROUTES = [
+  { path: '/',            label: 'Home' },
+  { path: '/experiences', label: 'Experiences' },
+  { path: '/projects',    label: 'Projects' },
+  { path: '/education',   label: 'Education' },
+  { path: '/skills',      label: 'Skills' },
+  { path: '/contact',     label: 'Contact' },
+] as const;
+
 export const PATH_NAME = {
   HOME: '/',
   EDUCATION: '/education',
@@ -25,8 +34,14 @@ export const TAB_NAME = {
   SKILLS: 'Skills',
   CONTACT: 'Contact',
   PROJECTS: 'Projects',
-
 };
+
+export const SKILLS = [
+  { name: 'Programming', items: ['TypeScript', 'Python', 'C#', 'JavaScript'] },
+  { name: 'Frontend',    items: ['NextJs', 'ReactJs', 'Tailwind', 'MobX', 'Redux'] },
+  { name: 'Backend',     items: ['.NET', 'MSSQL', 'MySQL', 'MongoDB', 'Redis'] },
+  { name: 'Tools',       items: ['Docker', 'Git', 'Claude Code'] },
+];
 
 export const STORAGE_KEY = {
   MODE: 'MODE',

@@ -1,5 +1,6 @@
 import { PiGearBold } from 'react-icons/pi';
 import { SkillsCard } from './SkillsCard';
+import { SKILLS } from '@/utils/constants';
 
 export const SkillsPage = () => {
   return (
@@ -9,18 +10,9 @@ export const SkillsPage = () => {
         <PiGearBold color='#e60022' size={40} className='pl-2' />
       </h1>
       <div className='flex flex-col -mx-4 space-y-3'>
-        <SkillsCard
-          name={'Programming'}
-          items={['TypeScript', 'Python', 'C#', 'JavaScript']} />
-        <SkillsCard
-          name={'Frontend'}
-          items={['NextJs', 'ReactJs', 'Tailwind', 'MobX', 'Redux']} />
-        <SkillsCard
-          name={'Backend'}
-          items={['.NET', 'MSSQL', 'MySQL', 'MongoDB', 'Redis']} />
-        <SkillsCard
-          name={'Tools'}
-          items={['Docker', 'Git', 'Claude Code']} />
+        {SKILLS.map(({ name, items }) => (
+          <SkillsCard key={name} name={name} items={[...items]} />
+        ))}
       </div>
     </div>
   );

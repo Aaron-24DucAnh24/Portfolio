@@ -13,7 +13,6 @@ This project is built using the following technologies:
 - **Material Tailwind**: A components library for Tailwind CSS and Material Design.
 - **React Icons**: A collection of popular icons for React projects.
 - **React Type Animation**: A React component for adding typing animations.
-- **Color Thief React**: A React component for grabbing the color palette from an image.
 
 ## Run the project
 
@@ -24,8 +23,6 @@ npm run dev
 # or
 yarn dev
 ```
-
-To run the development server:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

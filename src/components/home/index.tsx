@@ -76,27 +76,15 @@ export const HomePage = () => {
               className='object-cover'
               fill />
           </div>
-          <div className='hidden sm:block h-24 w-24 absolute top-10 left-10 animate-bound-y-reverse'>
-            <Image
-              src={STATIC_URLS.CLOUD}
-              alt={STATIC_URLS.CLOUD}
-              className='object-cover'
-              fill />
-          </div>
-          <div className='hidden sm:block h-12 w-12 absolute bottom-10 right-20 animate-bound-y'>
-            <Image
-              src={STATIC_URLS.CLOUD}
-              alt={STATIC_URLS.CLOUD}
-              className='object-cover'
-              fill />
-          </div>
-          <div className='hidden sm:block h-16 w-16 absolute top-32 right-32 animate-bound-y'>
-            <Image
-              src={STATIC_URLS.CLOUD}
-              alt={STATIC_URLS.CLOUD}
-              className='object-cover'
-              fill />
-          </div>
+          {[
+            { size: 'h-24 w-24', position: 'top-10 left-10',    animation: 'animate-bound-y-reverse' },
+            { size: 'h-12 w-12', position: 'bottom-10 right-20', animation: 'animate-bound-y' },
+            { size: 'h-16 w-16', position: 'top-32 right-32',   animation: 'animate-bound-y' },
+          ].map(({ size, position, animation }) => (
+            <div key={position} className={`hidden sm:block ${size} absolute ${position} ${animation}`}>
+              <Image src={STATIC_URLS.CLOUD} alt='cloud' className='object-cover' fill />
+            </div>
+          ))}
         </div>
       </div>
     </div>
