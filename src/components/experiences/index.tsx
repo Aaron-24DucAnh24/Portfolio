@@ -23,19 +23,20 @@ export const ExperiencePage = () => {
         <AiOutlineProject color='#e60022' size={40} className='pl-2' />
       </h1>
       <div className='flex flex-col space-y-4'>
-        {
-          experiencesData.map((experience, index) => (
-            <ExperienceCard
-              key={index}
-              name={experience.name}
-              image={experience.image}
-              position={experience.position}
-              from={new Date(experience.from)}
-              to={experience.to ? new Date(experience.to) : null}
-              desc={descComponents[experience.descComponent as DescComponentKey]}
-              companyUrl={experience.companyUrl} />
-          ))
-        }
+        {experiencesData.map((company, index) => (
+          <ExperienceCard
+            key={index}
+            name={company.name}
+            image={company.image}
+            companyUrl={company.companyUrl}
+            positions={company.positions.map(p => ({
+              title: p.title,
+              from: new Date(p.from),
+              to: ('to' in p && p.to) ? new Date(p.to as string) : null,
+              desc: descComponents[p.descComponent as DescComponentKey],
+            }))}
+          />
+        ))}
       </div>
     </div>
   );
