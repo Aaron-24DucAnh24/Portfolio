@@ -31,8 +31,8 @@ export const EducationCard = (props: IEducationCard) => {
   return (
     <div
       className={
-        `shadow-md hover:shadow-2xl rounded-lg overflow-hidden border relative
-        ${isDarkTheme ? 'bg-fifth border-third' : ''}`
+        `shadow-md hover:shadow-2xl rounded-xl overflow-hidden border relative
+        ${isDarkTheme ? 'bg-fifth border-white/10' : 'bg-white border-gray-200'}`
       }
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}>
@@ -44,10 +44,10 @@ export const EducationCard = (props: IEducationCard) => {
           width={128}
           height={128} />
         <div className='flex flex-col space-y-1 justify-center items-center sm:items-start text-center sm:text-start'>
-          <div className='text-base uppercase font-semibold'>{orgName}</div>
-          <div className='uppercase text-base'>{degreeName}</div>
-          <div className='text-primary text-base font-semibold'>{score}</div>
-          <div className='italic text-third text-base'>{`From ${from} to ${to}`}</div>
+          <div className='text-sm uppercase font-semibold'>{orgName}</div>
+          <div className='uppercase text-sm'>{degreeName}</div>
+          <div className='text-primary text-sm font-medium'>{score}</div>
+          <div className='italic text-third text-xs'>{`From ${from} to ${to}`}</div>
         </div>
       </div>
       <ShrinkBorder isHover={isHover} />
