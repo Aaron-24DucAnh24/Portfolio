@@ -1,20 +1,17 @@
 'use client';
 
-import { STATIC_URLS } from '@/utils/constants';
+import { PATH_NAME, STATIC_URLS } from '@/utils/constants';
 import { Button } from '../general/Button';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 
-export const handleContact = () => {
-  window.scroll({
-    top: window.screen.height,
-    behavior: 'smooth',
-  });
-};
-
 export const HomePage = () => {
   const handleOpenCV = () => {
     window.open(STATIC_URLS.CV);
+  };
+
+  const handleContact = () => {
+    window.location.replace(PATH_NAME.CONTACT);
   };
 
   return (

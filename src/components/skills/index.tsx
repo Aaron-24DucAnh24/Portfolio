@@ -20,7 +20,7 @@ export const SkillsPage = () => {
           items={['.NET', 'MSSQL', 'MySQL', 'MongoDB', 'Redis']} />
         <SkillsCard
           name={'Tools'}
-          items={['Docker', 'Git']} />
+          items={['Docker', 'Git', 'Claude Code']} />
       </div>
     </div>
   );

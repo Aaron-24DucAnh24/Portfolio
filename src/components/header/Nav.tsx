@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PATH_NAME, TAB_NAME } from '@/utils/constants';
 import { THEME } from '@/utils/enums';
-import { handleContact } from '../home';
 import { useAppSelector } from '@/utils/hooks';
 
 export const Nav = () => {
@@ -29,10 +28,8 @@ export const Nav = () => {
         <li className={`items-center flex  ${pathName == PATH_NAME.SKILLS && activeStyle}`}>
           <Link href={PATH_NAME.SKILLS}>{TAB_NAME.SKILLS}</Link>
         </li>
-        <li
-          className={'items-center flex cursor-pointer'}
-          onClick={handleContact}>
-          {TAB_NAME.CONTACT}
+        <li className={`items-center flex ${pathName == PATH_NAME.CONTACT && activeStyle}`}>
+          <Link href={PATH_NAME.CONTACT}>{TAB_NAME.CONTACT}</Link>
         </li>
       </ul>
     </nav>

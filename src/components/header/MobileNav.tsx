@@ -8,7 +8,6 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa6';
 import { FaCheck } from 'react-icons/fa';
 import { SmoothUl } from '../general/SmoothUl';
 import { THEME } from '@/utils/enums';
-import { handleContact } from '../home';
 import { useAppSelector } from '@/utils/hooks';
 
 export const MobileNav = () => {
@@ -88,10 +87,13 @@ export const MobileNav = () => {
             {pathName === PATH_NAME.SKILLS && <FaCheck color={'#e60022'} />}
           </Link>
         </li>
-        <li
-          className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center cursor-pointer'
-          onClick={handleContact}>
-          {TAB_NAME.CONTACT}
+        <li>
+          <Link
+            className='p-2 w-40 rounded-2xl hover:bg-fourth hover:text-secondary flex justify-between items-center'
+            href={PATH_NAME.CONTACT}>
+            {TAB_NAME.CONTACT}
+            {pathName === PATH_NAME.CONTACT && <FaCheck color={'#e60022'} />}
+          </Link>
         </li>
       </SmoothUl>
     </nav >

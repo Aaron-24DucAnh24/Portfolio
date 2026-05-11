@@ -30,7 +30,7 @@ export const SkillsCard = (props: ISkillsCard) => {
             {items.map((item, i) => (
               <span
                 key={i}
-                className={`px-3 py-1 rounded-full text-sm font-light border ${isDarkTheme ? 'border-third text-white' : 'border-secondary text-secondary'}`}>
+                className={`px-3 py-1 rounded-full text-sm font-light border ${isDarkTheme ? 'border-third text-white' : 'border-secondary text-secondary italic'}`}>
                 {item}
               </span>
             ))}

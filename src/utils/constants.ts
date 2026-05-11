@@ -15,6 +15,7 @@ export const PATH_NAME = {
   EXPERIENCES: '/experiences',
   SKILLS: '/skills',
   PROJECTS: '/projects',
+  CONTACT: '/contact',
 };
 
 export const TAB_NAME = {
