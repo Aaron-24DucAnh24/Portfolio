@@ -3,8 +3,6 @@ export const STATIC_URLS = {
   ERROR_404: '/image/404.png',
   WAVING_HAND: '/image/waving-hand.png',
   DUCANH: '/image/ducanh.jpg',
-  '22': '/image/22.jpg',
-  CLOUD: '/image/cloud.png',
   PETOPIA: '/image/petopia.png',
   CV: 'https://drive.google.com/drive/folders/1oJ4_Kta3MXeWfJUvFn2JWXPjX-oCK1Ci?usp=sharing',
 };
