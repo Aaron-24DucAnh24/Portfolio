@@ -49,8 +49,8 @@ export const EducationPage = () => {
               orgName={edu.orgName}
               degreeName={edu.degreeName}
               score={edu.score}
-              from={edu.from}
-              to={edu.to} />
+              issued={'issued' in edu ? edu.issued : undefined}
+              certificateUrl={'certificateUrl' in edu ? edu.certificateUrl : undefined} />
           ))
         }
       </div>

@@ -4,7 +4,22 @@
     "orgName": "IDP education Vietnam",
     "degreeName": "IELTS",
     "score": "Band 6.0",
-    "from": "2022",
-    "to": "2024"
+    "issued": "2022"
+  },
+  {
+    "image": "/image/anthropic.png",
+    "orgName": "Anthropic",
+    "degreeName": "Claude Code in Action",
+    "score": "Credential ID: ne2n3d8b9zrk",
+    "issued": "2026",
+    "certificateUrl": "https://verify.skilljar.com/c/ne2n3d8b9zrk"
+  },
+  {
+    "image": "/image/anthropic.png",
+    "orgName": "Anthropic",
+    "degreeName": "Claude code 101",
+    "score": "Credential ID: fsxvxyrq54fn",
+    "issued": "2026",
+    "certificateUrl": "https://verify.skilljar.com/c/fsxvxyrq54fn"
   }
 ]

@@ -10,8 +10,10 @@ interface IEducationCard {
   orgName: string;
   degreeName: string;
   score: string;
-  from: string;
-  to: string;
+  from?: string;
+  to?: string;
+  issued?: string;
+  certificateUrl?: string;
 }
 
 export const EducationCard = (props: IEducationCard) => {
@@ -22,6 +24,8 @@ export const EducationCard = (props: IEducationCard) => {
     score,
     from,
     to,
+    issued,
+    certificateUrl,
   } = props;
 
   const isDarkTheme = useAppSelector(x => x.theme.value === THEME.DARK);
@@ -45,7 +49,20 @@ export const EducationCard = (props: IEducationCard) => {
           <div className='text-sm uppercase font-semibold'>{orgName}</div>
           <div className='uppercase text-sm'>{degreeName}</div>
           <div className='text-primary text-sm font-medium'>{score}</div>
-          <div className='italic text-third text-xs'>{`From ${from} to ${to}`}</div>
+          {issued
+            ? <div className='italic text-third text-xs'>{`Issued ${issued}`}</div>
+            : from && to && <div className='italic text-third text-xs'>{`From ${from} to ${to}`}</div>
+          }
+          {certificateUrl && (
+            <a
+              href={certificateUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='mt-2 inline-flex items-center gap-1 text-xs font-medium border rounded-full px-3 py-1 transition-colors hover:border-primary hover:text-primary'
+              onClick={e => e.stopPropagation()}>
+              Show credential ↗
+            </a>
+          )}
         </div>
       </div>
       <ShrinkBorder isHover={isHover} />
