@@ -28,35 +28,12 @@ const config: Config = {
         '60%': { transform: 'rotate(0deg)' },
         '100%': { transform: 'rotate(0deg)' },
       },
-      'flip-front': {
-        '0%': { transform: 'rotateY(0deg)' },
-        '15%': { transform: 'rotateY(0deg)' },
-        '35%': { transform: 'rotateY(180deg)' },
-        '65%': { transform: 'rotateY(180deg)' },
-        '85%': { transform: 'rotateY(0deg)' },
-        '100%': { transform: 'rotateY(0deg)' },
-      },
-      'flip-back': {
-        '0%': { transform: 'rotateY(180deg)' },
-        '15%': { transform: 'rotateY(180deg)' },
-        '35%': { transform: 'rotateY(0deg)' },
-        '65%': { transform: 'rotateY(0deg)' },
-        '85%': { transform: 'rotateY(180deg)' },
-        '100%': { transform: 'rotateY(180deg)' },
-      },
-      'bound-y': {
-        '0%': { transform: 'translateX(0)' },
-        '25%': { transform: 'translateX(-20%)' },
-        '50%': { transform: 'translateX(0)' },
-        '75%': { transform: 'translateX(20%)' },
-        '100%': { transform: 'translateX(0)' },
-      },
-      'bound-y-reverse': {
-        '0%': { transform: 'translateX(0)' },
-        '25%': { transform: 'translateX(20%)' },
-        '50%': { transform: 'translateX(0)' },
-        '75%': { transform: 'translateX(-20%)' },
-        '100%': { transform: 'translateX(0)' },
+      'float-up': {
+        '0%':  { transform: 'translateY(100vh)', opacity: '0' },
+        '8%':  { opacity: '1' },
+        '58%': { opacity: '1' },
+        '68%': { transform: 'translateY(-8vh)', opacity: '0' },
+        '100%':{ transform: 'translateY(-60vh)', opacity: '0' },
       },
       'slide-in': {
         '0%': {
@@ -144,10 +121,7 @@ const config: Config = {
     },
     animation: {
       shake: 'shake 2s linear infinite',
-      'flip-front': 'flip-front 5s linear infinite',
-      'flip-back': 'flip-back 5s linear infinite',
-      'bound-y': 'bound-y 1.5s linear infinite',
-      'bound-y-reverse': 'bound-y-reverse 1.5s linear infinite',
+      'float-up': 'float-up 10s linear infinite',
       'slide-in': 'slide-in 0.5s linear',
       'slide-up': 'slide-up 0.35s ease-out',
       'slide-down': 'slide-down 0.35s ease-out',

@@ -12,7 +12,6 @@ This project is built using the following technologies:
 - **Tailwind CSS**: A utility-first CSS framework for rapidly building custom user interfaces.
 - **Material Tailwind**: A components library for Tailwind CSS and Material Design.
 - **React Icons**: A collection of popular icons for React projects.
-- **React Type Animation**: A React component for adding typing animations.
 
 ## Run the project
 

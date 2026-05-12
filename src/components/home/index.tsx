@@ -3,7 +3,7 @@
 import { PATH_NAME, STATIC_URLS } from '@/utils/constants';
 import { Button } from '../general/Button';
 import Image from 'next/image';
-import { TypeAnimation } from 'react-type-animation';
+import { FloatingCode } from './FloatingCode';
 
 export const HomePage = () => {
   const handleOpenCV = () => {
@@ -17,7 +17,7 @@ export const HomePage = () => {
   return (
     <div className={'h-full w-full flex flex-col sm:flex-wrap sm:flex-row'}>
       <div
-        className='h-1/2 sm:h-full w-full sm:w-1/2 flex flex-col justify-center space-y-4 md:space-y-8 p-4'>
+        className='h-1/2 sm:h-full w-full sm:w-1/2 flex flex-col justify-center space-y-3 md:space-y-5 p-4'>
         <div className='text-xl md:text-3xl font-semibold flex items-center sm:tracking-tighter'>
           {'Hi there, I\'m Duc-anh Bui'}
           <Image
@@ -28,24 +28,7 @@ export const HomePage = () => {
             width={36} />
         </div>
         <div className='text-base md:text-xl text-third italic'>
-          {'I\'m into '}
-          <TypeAnimation
-            sequence={[
-              'Frontend development',
-              1000,
-              'Backend development',
-              1000,
-              'Fullstack development',
-              1000,
-            ]}
-            speed={50}
-            repeat={Infinity}
-            style={{
-              fontSize: '1.25rem',
-              display: 'inline-block',
-              color: '#e60022',
-              fontWeight: 600,
-            }} />
+          {'Fullstack Software Engineer'}
         </div>
         <div className='text:md sm:text-lg text-justify'>
           {'I am a Bachelor of Computer Science and a dedicated software engineer. I am committed to continuous learning and growth, with the long-term goal of transitioning into a Business Analyst role.'}
@@ -61,30 +44,17 @@ export const HomePage = () => {
         </div>
       </div>
       <div className='sm:bg-primary h-1/2 sm:h-full w-full sm:w-1/2 p-4 rounded-l-2xl'>
-        <div className='h-full sm:h-full flex items-center justify-center relative'>
-          <div className='h-72 w-72 rounded-full overflow-hidden absolute animate-flip-front flip-card'>
+        <div className='h-full flex items-center justify-center relative'>
+          <div className='absolute inset-0 overflow-hidden'>
+            <FloatingCode />
+          </div>
+          <div className='h-72 w-72 rounded-full overflow-hidden relative z-10'>
             <Image
               src={STATIC_URLS.DUCANH}
               alt={STATIC_URLS.DUCANH}
               className='object-cover'
               fill />
           </div>
-          <div className='h-72 w-72 rounded-full overflow-hidden absolute animate-flip-back flip-card'>
-            <Image
-              src={STATIC_URLS[22]}
-              alt={STATIC_URLS[22]}
-              className='object-cover'
-              fill />
-          </div>
-          {[
-            { size: 'h-24 w-24', position: 'top-10 left-10',    animation: 'animate-bound-y-reverse' },
-            { size: 'h-12 w-12', position: 'bottom-10 right-20', animation: 'animate-bound-y' },
-            { size: 'h-16 w-16', position: 'top-32 right-32',   animation: 'animate-bound-y' },
-          ].map(({ size, position, animation }) => (
-            <div key={position} className={`hidden sm:block ${size} absolute ${position} ${animation}`}>
-              <Image src={STATIC_URLS.CLOUD} alt='cloud' className='object-cover' fill />
-            </div>
-          ))}
         </div>
       </div>
     </div>

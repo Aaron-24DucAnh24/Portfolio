@@ -26,11 +26,6 @@
   height: calc(100vh - 64px);
 }
 
-.flip-card {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
 }

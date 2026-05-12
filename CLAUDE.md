@@ -12,6 +12,12 @@ yarn lint       # ESLint with auto-fix
 
 No test suite is configured.
 
+## After every file change
+
+1. Run `yarn lint` to auto-fix and verify no lint errors.
+2. Check `README.md` — update if the change affects setup, usage, or documented features.
+3. Check `package.json` — update if dependencies, scripts, or metadata changed.
+
 ## Architecture
 
 **Next.js 14 App Router** portfolio with TypeScript + Tailwind CSS + Redux Toolkit.
