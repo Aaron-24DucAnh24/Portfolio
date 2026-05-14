@@ -10,11 +10,11 @@ export const W2Desc = () => {
     <ul className="leading-6 space-y-2 text-sm text-third">
       <li className="dotted-li">
         <p>
-          {'Worked on '}
+          {'Contributed to '}
           <i className={`text-black not-italic ${theme.value === THEME.DARK ? 'text-fourth' : 'text-fifth'}`}>
-            <b>{'w2Commerce V5'}</b>
+            <b>{'W2 Commerce V5'}</b>
           </i>
-          {', a scalable e-commerce platform designed to be customized for multiple partner businesses including: '}
+          {', a scalable multi-tenant e-commerce platform serving 50+ partner businesses, including '}
           <i
             className={`cursor-pointer text-black underline ${theme.value === THEME.DARK ? 'text-fourth' : 'text-fifth'}`}
             onClick={() => window.open('https://www.wakudoki.ne.jp/ec/cmShopTopPage1.html')}>
@@ -32,11 +32,17 @@ export const W2Desc = () => {
             onClick={() => window.open('https://www.fukutaro.co.jp/en/')}>
             <b>{'Fukutaro'}</b>
           </i>
+          {'.'}
         </p>
       </li>
       <li className="dotted-li">
         <p>
-          {'Built reusable and configurable modules to support different business rules, workflows, and UI requirements.'}
+          {'Built reusable, configurable modules using ASP.NET and SQL Server to support diverse business rules and UI requirements per partner.'}
+        </p>
+      </li>
+      <li className="dotted-li">
+        <p>
+          {'Integrated third-party services including payment gateways, order management workflows, and user authentication systems.'}
         </p>
       </li>
     </ul>

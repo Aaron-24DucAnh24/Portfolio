@@ -21,6 +21,7 @@ interface IExperienceCard {
   image: string;
   positions: IPosition[];
   companyUrl: string;
+  employmentType: string;
 }
 
 const PositionRow = ({
@@ -72,7 +73,7 @@ const PositionRow = ({
   );
 };
 
-export const ExperienceCard = ({ name, image, positions, companyUrl }: IExperienceCard) => {
+export const ExperienceCard = ({ name, image, positions, companyUrl, employmentType }: IExperienceCard) => {
   const { isHover, hoverProps } = useHoverState();
   const isDarkTheme = useAppSelector(x => x.theme.value === THEME.DARK);
 
@@ -99,6 +100,13 @@ export const ExperienceCard = ({ name, image, positions, companyUrl }: IExperien
           {name}
           <IoOpenOutline size={13} className='opacity-50' />
         </Link>
+        <span className={`ml-auto px-2 py-0.5 rounded-full text-[10px] font-medium tracking-wide border flex-shrink-0
+          ${employmentType === 'Freelance'
+            ? 'border-primary text-primary'
+            : isDarkTheme ? 'border-white/20 text-third' : 'border-gray-300 text-gray-500'
+          }`}>
+          {employmentType}
+        </span>
       </div>
 
       <div>

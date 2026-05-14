@@ -3,10 +3,12 @@
     "name": "LABELBOX",
     "image": "/image/labelbox.jpg",
     "companyUrl": "https://labelbox.com",
+    "employmentType": "Freelance",
     "positions": [
       {
-        "title": "Software Engineer",
+        "title": "Software Engineer – AI Code Evaluator",
         "from": "2026-02-20",
+        "to": "2026-04-30",
         "descComponent": "LabelboxDesc"
       }
     ]
@@ -15,11 +17,12 @@
     "name": "W2SOLUTION VIETNAM",
     "image": "/image/w2.png",
     "companyUrl": "http://w2solution.vn",
+    "employmentType": "Full-time",
     "positions": [
       {
         "title": "Software Engineer",
-        "from": "2024-10-1",
-        "to": "2026-04-29",
+        "from": "2025-01-01",
+        "to": "2026-04-24",
         "descComponent": "W2Desc"
       }
     ]
@@ -28,6 +31,7 @@
     "name": "NETPOWER VIETNAM",
     "image": "/image/netpower.png",
     "companyUrl": "https://www.linkedin.com/company/netpower/?originalSubdomain=vn",
+    "employmentType": "Full-time",
     "positions": [
       {
         "title": "Software Engineer",

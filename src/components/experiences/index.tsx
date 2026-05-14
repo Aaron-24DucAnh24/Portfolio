@@ -29,6 +29,7 @@ export const ExperiencePage = () => {
             name={company.name}
             image={company.image}
             companyUrl={company.companyUrl}
+            employmentType={company.employmentType}
             positions={company.positions.map(p => ({
               title: p.title,
               from: new Date(p.from),

@@ -31,7 +31,7 @@ export const HomePage = () => {
           {'Fullstack Software Engineer'}
         </div>
         <div className='text:md sm:text-lg text-justify'>
-          {'Full-stack software engineer with 2+ years of experience building production systems across e-commerce and education domains. Proficient in .NET, React, and Next.js, with hands-on experience evaluating and directing AI-generated code. Comfortable working across the full stack and collaborating in agile, cross-functional teams. Committed to continuous learning and growth, with a long-term goal of transitioning into a Business Analyst role.'}
+          {'Software engineer with 2+ years of experience building production systems across e-commerce and education domains. Proficient in .NET, React, and Next.js, with hands-on experience evaluating and directing AI-generated code. Actively developing business analysis skills alongside engineering, with a long-term goal of bridging the gap between technical teams and business strategy.'}
         </div>
         <div className='flex space-x-2'>
           <Button
